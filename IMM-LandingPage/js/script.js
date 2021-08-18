@@ -5,123 +5,111 @@ $(document).ready(function () {
 
   $("#btn-next").click(function (event) {
     clearInterval(autoLoad);
-    var slide_sau = $(".active").next();
-    var vi_tri_hien_tai = $(".active_nut").index() + 1;
-    if (slide_sau.length != 0) {
+    var after_slide = $(".active").next();
+    var current_slide = $(".active_root").index() + 1;
+    if (after_slide.length != 0) {
       $(".active")
-        .addClass("bien-mat-ben-trai")
+        .addClass("out_left")
         .one("webkitAnimationEnd", function (event) {
-          $(".bien-mat-ben-trai")
-            .removeClass("bien-mat-ben-trai")
-            .removeClass("active");
+          $(".out_left").removeClass("out_left").removeClass("active");
         });
-      slide_sau
+      after_slide
         .addClass("active")
-        .addClass("di-vao-ben-phai")
+        .addClass("in_right")
         .one("webkitAnimationEnd", function (event) {
-          $(".di-vao-ben-phai").removeClass("di-vao-ben-phai");
+          $(".in_right").removeClass("in_right");
         });
       // xử lý nút
-      $(".nut-slide ul li").removeClass("active_nut");
-      $(".nut-slide ul li:nth-child(" + (vi_tri_hien_tai + 1) + ")").addClass(
-        "active_nut"
+      $(".root_slide ul li").removeClass("active_root");
+      $(".root_slide ul li:nth-child(" + (current_slide + 1) + ")").addClass(
+        "active_root"
       );
     } else {
       $(".active")
-        .addClass("bien-mat-ben-trai")
+        .addClass("out_left")
         .one("webkitAnimationEnd", function (event) {
-          $(".bien-mat-ben-trai")
-            .removeClass("bien-mat-ben-trai")
-            .removeClass("active");
+          $(".out_left").removeClass("out_left").removeClass("active");
         });
       $(".slide:first-child")
         .addClass("active")
-        .addClass("di-vao-ben-phai")
+        .addClass("in_right")
         .one("webkitAnimationEnd", function (event) {
-          $(".di-vao-ben-phai").removeClass("di-vao-ben-phai");
+          $(".in_right").removeClass("in_right");
         });
       // xử lý nút
-      $(".nut-slide ul li").removeClass("active_nut");
-      $(".nut-slide ul li:nth-child(1)").addClass("active_nut");
+      $(".root_slide ul li").removeClass("active_root");
+      $(".root_slide ul li:nth-child(1)").addClass("active_root");
     }
   });
   $("#btn-prev").click(function (event) {
     clearInterval(autoLoad);
-    var slide_truoc = $(".active").prev();
-    var vi_tri_hien_tai = $(".active_nut").index() + 1;
-    if (slide_truoc.length != 0) {
+    var before_slide = $(".active").prev();
+    var current_slide = $(".active_root").index() + 1;
+    if (before_slide.length != 0) {
       $(".active")
-        .addClass("bien-mat-ben-phai")
+        .addClass("out_right")
         .one("webkitAnimationEnd", function (event) {
-          $(".bien-mat-ben-phai")
-            .removeClass("bien-mat-ben-phai")
-            .removeClass("active");
+          $(".out_right").removeClass("out_right").removeClass("active");
         });
-      slide_truoc
+      before_slide
         .addClass("active")
-        .addClass("di-vao-ben-trai")
+        .addClass("in_left")
         .one("webkitAnimationEnd", function (event) {
-          $(".di-vao-ben-trai").removeClass("di-vao-ben-trai");
+          $(".in_left").removeClass("in_left");
         });
       // xử lý nút
-      $(".nut-slide ul li").removeClass("active_nut");
-      $(".nut-slide ul li:nth-child(" + (vi_tri_hien_tai - 1) + ")").addClass(
-        "active_nut"
+      $(".root_slide ul li").removeClass("active_root");
+      $(".root_slide ul li:nth-child(" + (current_slide - 1) + ")").addClass(
+        "active_root"
       );
     } else {
       $(".active")
-        .addClass("bien-mat-ben-phai")
+        .addClass("out_right")
         .one("webkitAnimationEnd", function (event) {
-          $(".bien-mat-ben-phai")
-            .removeClass("bien-mat-ben-phai")
-            .removeClass("active");
+          $(".out_right").removeClass("out_right").removeClass("active");
         });
       $(".slide:last-child")
         .addClass("active")
-        .addClass("di-vao-ben-trai")
+        .addClass("in_left")
         .one("webkitAnimationEnd", function (event) {
-          $(".di-vao-ben-trai").removeClass("di-vao-ben-trai");
+          $(".in_left").removeClass("in_left");
         });
       // xử lý nút
-      $(".nut-slide ul li").removeClass("active_nut");
-      $(".nut-slide ul li:last-child").addClass("active_nut");
+      $(".root_slide ul li").removeClass("active_root");
+      $(".root_slide ul li:last-child").addClass("active_root");
     }
   });
 
-  $(".nut-slide ul li").click(function (event) {
+  $(".root_slide ul li").click(function (event) {
     clearInterval(autoLoad);
-    var vi_tri_hien_tai = $(".active_nut").index() + 1;
+    var current_slide = $(".active_root").index() + 1;
     var vi_tri_click = $(this).index() + 1;
-    $(".nut-slide ul li").removeClass("active_nut");
-    $(this).addClass("active_nut");
-    if (vi_tri_click > vi_tri_hien_tai) {
+    $(".root_slide ul li").removeClass("active_root");
+    $(this).addClass("active_root");
+    if (vi_tri_click > current_slide) {
       $(".active")
-        .addClass("bien-mat-ben-trai")
+        .addClass("out_left")
         .one("webkitAnimationEnd", function (event) {
-          $(".bien-mat-ben-trai")
-            .removeClass("bien-mat-ben-trai")
-            .removeClass("active");
+          $(".out_left").removeClass("out_left").removeClass("active");
         });
       $(".slide:nth-child(" + vi_tri_click + ")")
         .addClass("active")
-        .addClass("di-vao-ben-phai")
+        .addClass("in_right")
         .one("webkitAnimationEnd", function (event) {
-          $(".di-vao-ben-phai").removeClass("di-vao-ben-phai");
+          $(".in_right").removeClass("in_right");
         });
     }
-    if (vi_tri_click < vi_tri_hien_tai) {
+    if (vi_tri_click < current_slide) {
       $(".active")
-        .addClass("bien-mat-ben-phai")
+        .addClass("out_right")
         .one("webkitAnimationEnd", function (event) {
-          $(".bien-mat-ben-phai")
-            .removeClass("bien-mat-ben-phai")
-            .removeClass("active");
+          $(".out_right").removeClass("out_right").removeClass("active");
         });
       $(".slide:nth-child(" + vi_tri_click + ")")
         .addClass("active")
-        .addClass("di-vao-ben-trai")
+        .addClass("in_left")
         .one("webkitAnimationEnd", function (event) {
-          $(".di-vao-ben-trai").removeClass("di-vao-ben-trai");
+          $(".in_left").removeClass("in_left");
         });
     }
   });

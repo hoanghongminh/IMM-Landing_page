@@ -86,8 +86,13 @@ body{
 .body-service .column_three{
   margin: 0 36px;
 }
+.body-service .body-service_column .service_number{
+  font-size: 48px;
+  font-weight: 900;
+  color: #F86296;
+}
 .body-service .column_three .service_market{
-  margin-top: 35px;
+  /* margin-top: 35px; */
 }
 .body-service .fa{
   border-radius: 50%;
@@ -100,10 +105,12 @@ body{
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+  text-align: center;
 }
 .body-service .body-service_column .service{
-  font-size: 24px;
-  font-weight: 900;
+  font-size: 30px;
+  font-weight: 600;
   color: #3D409D;
 }
 .body-service .body-service_column .body-service_column_text{
@@ -113,6 +120,7 @@ body{
 }
 .body_content{
   padding: 0 93px;
+  max-height: 705px;
 }
 .body_content .text_title{
   text-align: center;
@@ -120,7 +128,7 @@ body{
 .body_content .text_title_row_one{
   font-size: 48px;
   font-weight: 900;
-  color: #3D409D;
+  color: #F86296;
   font-style: normal;
 }
 .body_content .text_title_row_two{
@@ -225,7 +233,7 @@ img {
   opacity:  1;
   visibility:  visible;	
 }
-.nut-slide span{
+.root_slide span{
   color: #F86296;;
   font-size: 40px;
 }
@@ -243,7 +251,7 @@ span#btn-next{
   z-index: 10;
   cursor: pointer;
 }
-.nut-slide ul {
+.root_slide ul {
   position:  absolute;
   z-index:  10;
   width:  100px;
@@ -254,7 +262,7 @@ span#btn-next{
   justify-content:  space-between;
 }
 
-.nut-slide ul li {
+.root_slide ul li {
   width:  10px;
   height:  10px;
   background:  #C4C4C4;
@@ -264,10 +272,10 @@ span#btn-next{
   cursor:  pointer;
   transition: 0.6s;
 }
-.bien-mat-ben-trai{
-  animation: bien-mat-ben-trai 1s forwards;
+.out_left{
+  animation: out_left 1s forwards;
 }
-@-webkit-keyframes bien-mat-ben-trai{
+@-webkit-keyframes out_left{
   from{
       transform: translateX(0%);
   }
@@ -275,10 +283,10 @@ span#btn-next{
       transform: translateX(-100%);
   }
 }
-.di-vao-ben-phai{
-  animation: di-vao-ben-phai 1s forwards;
+.in_right{
+  animation: in_right 1s forwards;
 }
-@-webkit-keyframes di-vao-ben-phai{
+@-webkit-keyframes in_right{
   from{
       transform: translateX(100%);
   }
@@ -287,10 +295,10 @@ span#btn-next{
   }
 }
 /*xử lý nút prev*/
-.bien-mat-ben-phai{
-  animation: bien-mat-ben-phai 1s forwards;
+.out_right{
+  animation: out_right 1s forwards;
 }
-@-webkit-keyframes bien-mat-ben-phai{
+@-webkit-keyframes out_right{
   from{
       transform: translateX(0%);
   }
@@ -298,10 +306,10 @@ span#btn-next{
       transform: translateX(100%);
   }
 }
-.di-vao-ben-trai{
-  animation: di-vao-ben-trai 1s forwards;
+.in_left{
+  animation: in_left 1s forwards;
 }
-@-webkit-keyframes di-vao-ben-trai{
+@-webkit-keyframes in_left{
   from{
       transform: translateX(-100%);
   }
@@ -309,7 +317,7 @@ span#btn-next{
       transform: translateX(0%);
   }
 }
-.nut-slide ul li.active_nut{
+.root_slide ul li.active_root{
   opacity: 1;
   background-color: #1A4C9D;
 }
