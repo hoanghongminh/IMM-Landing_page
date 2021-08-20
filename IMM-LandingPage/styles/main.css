@@ -719,10 +719,95 @@ span#btn-next{
   background: white;
   z-index: 99;
 }
-.slide_container_author{
-  margin: 0 130px;
-  width: auto;
+.slider_author .myslide .content .comment{
+  margin-bottom: 15px;
 }
+.slider_author .myslide .content .author{
+  margin-bottom: 15px;
+}
+.slider_author .myslide .images{
+  width: 38%;
+  margin: 4px 16px;
+}
+.slider_author .myslide{
+  height: auto;
+  width: 611px;
+  margin: 0 auto 80px;
+  display: flex;
+  padding: 31px;
+  border: 1px solid #FAFAFA;
+  box-shadow: 0px 0px 4px 4px rgba(196, 196, 196, 0.2);
+  border-radius: 12px;
+}
+.slider_author{
+  position: relative;
+}
+.slider_author .button{
+  position: absolute;
+
+  display: flex;
+  top: 36%;
+  width: 100%;
+}
+
+.slider{
+	position: relative;
+	width: 100%;
+	background: #2c3e50; /* darckblue */
+}
+.myslide{
+	height: 655px;
+	display: none;
+	overflow: hidden;
+}
+
+.prev, .next{
+	position: absolute;
+	top: 50%;
+	transform: translate(0, -50%);
+	font-size: 50px;
+	padding: 15px;
+	cursor: pointer;
+	color: #fff;
+	transition: 0.1s;
+	user-select: none;
+}
+.prev:hover, .next:hover{
+	color: #00a7ff; 
+}
+.next{
+	right: 0;
+}
+.dotsbox{
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%);
+	bottom: 20px;
+	cursor: pointer;
+}
+.dot{
+	display: inline-block;
+	width: 15px;
+	height: 15px;
+	border: 3px solid #fff;
+	border-radius: 50%;
+	margin: 0 10px;
+	cursor: pointer;
+}
+.active, .dot:hover{
+	border-color: #00a7ff; 
+}
+.fade{
+  opacity: 1 !important;
+}
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+
 @media only screen and (max-width: 600px) {
   .our_customers .logo{
     display: block;
