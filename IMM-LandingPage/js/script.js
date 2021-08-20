@@ -83,29 +83,29 @@ $(document).ready(function () {
   $(".root_slide ul li").click(function (event) {
     clearInterval(autoLoad);
     var current_slide = $(".active_root").index() + 1;
-    var vi_tri_click = $(this).index() + 1;
+    var click_position = $(this).index() + 1;
     $(".root_slide ul li").removeClass("active_root");
     $(this).addClass("active_root");
-    if (vi_tri_click > current_slide) {
+    if (click_position > current_slide) {
       $(".active")
         .addClass("out_left")
         .one("webkitAnimationEnd", function (event) {
           $(".out_left").removeClass("out_left").removeClass("active");
         });
-      $(".slide:nth-child(" + vi_tri_click + ")")
+      $(".slide:nth-child(" + click_position + ")")
         .addClass("active")
         .addClass("in_right")
         .one("webkitAnimationEnd", function (event) {
           $(".in_right").removeClass("in_right");
         });
     }
-    if (vi_tri_click < current_slide) {
+    if (click_position < current_slide) {
       $(".active")
         .addClass("out_right")
         .one("webkitAnimationEnd", function (event) {
           $(".out_right").removeClass("out_right").removeClass("active");
         });
-      $(".slide:nth-child(" + vi_tri_click + ")")
+      $(".slide:nth-child(" + click_position + ")")
         .addClass("active")
         .addClass("in_left")
         .one("webkitAnimationEnd", function (event) {

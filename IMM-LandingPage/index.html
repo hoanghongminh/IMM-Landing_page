@@ -22,17 +22,26 @@
 </head>
 
 <body>
-  <div class="background_banner">
+  <div class="header_fixed">
     <header>
       <section class="header-left">
-        <a href="http://"> <img src="" alt="logo"></a>
+        <a href="http://"> <img src="images/LOGO.svg" alt="logo"></a>
       </section>
       <section class="header-right">
-        <div class="header-text">IDO Service</div>
-        <div class="header-text">Liquidity Service</div>
-        <div class="header-text">Market Making Service</div>
+        <a href="#ido_service">
+          <div class="header-text">IDO Service</div>
+        </a>
+        <a href="#liquidity_service">
+          <div class="header-text">Liquidity Service</div>
+        </a>
+        <a href="#market_making">
+          <div class="header-text">Market Making Service</div>
+        </a>
       </section>
     </header>
+  </div>
+  <div class="background_banner">
+
     <div class="banner-page">
       <div class="banner-page-left">
         <div class="row-one">Effective Solution</div>
@@ -63,7 +72,7 @@
     <div class="text_title">
       <div class="text_title_row_one">Why choose us</div>
       <div class="text_title_row_two">Dịch vụ IMM B to B cung cấp tới khách hàng:</div><br><br>
-    </div>
+    </div><br><br><br>
     <section class="slide_container">
       <div class="child_slide_container">
         <div class="slide active">
@@ -168,8 +177,8 @@
         </div>
       </div>
       <div class="root_slide">
-        <span id="btn-prev"><i class="fa fa-chevron-left"></i></span>
-        <span id="btn-next"><i class="fa fa-chevron-right"></i></span>
+        <span id="btn-prev"><img src="images/root_prev.svg" alt=""></span>
+        <span id="btn-next"><img src="images/root_next.svg" alt=""></span>
         <ul>
           <li class="active_root"></li>
           <li></li>
@@ -225,30 +234,32 @@
     </div>
   </section><br><br><br><br>
 
-  <section class="body_our_service">
-    <div class="body_content">
-      <div class="text_title">
-        <div class="text_title_row_one">Our service</div>
-        <div class="text_title_row_two">Dịch vụ IMM B to B cung cấp tới khách hàng:</div>
-      </div><br><br><br>
-    </div>
+  <div style="position: relative;">
+    <section class="body_our_service">
+      <div class="body_content">
+        <div class="text_title">
+          <div class="text_title_row_one">Our service</div>
+          <div class="text_title_row_two">Dịch vụ IMM B to B cung cấp tới khách hàng:</div>
+        </div><br><br><br>
+      </div>
 
-  </section>
-  <div class="content_service">
-    <div class="body-service_column">
-      <i class="fa fa-check"></i>
-      <div class="service service_ido">IDO SERVICE</div>
-    </div>
-    <div class="body-service_column column_two">
-      <i class="fa fa-check"></i>
-      <div class="service service_liquidity">Liquidity Service</div>
-    </div>
-    <div class="body-service_column column_three">
-      <i class="fa fa-check"></i>
-      <div class="service service_market">Market Making Service</div>
+    </section>
+    <div class="content_service">
+      <div class="body-service_column">
+        <i class="fa fa-check"></i>
+        <div class="service service_ido">IDO SERVICE</div>
+      </div>
+      <div class="body-service_column column_two">
+        <i class="fa fa-check"></i>
+        <div class="service service_liquidity">Liquidity Service</div>
+      </div>
+      <div class="body-service_column column_three">
+        <i class="fa fa-check"></i>
+        <div class="service service_market">Market Making Service</div>
+      </div>
     </div>
   </div>
-  <section class="ido_service">
+  <section class="ido_service" id="ido_service">
     <div class="column_one">
       <div class="title">
         <div class="number">01</div>
@@ -271,7 +282,7 @@
       </div>
     </div>
   </section><br><br><br>
-  <section class="liquidity_service">
+  <section class="liquidity_service" id="liquidity_service">
     <div class="column_one">
       <div class="icon"><img src="images/icon_1.svg" alt=""></div>
       <div class="title">Tokens Support</div>
@@ -298,6 +309,44 @@
       </div>
     </div>
   </section>
+
+  <section class="market_making" id="market_making">
+    <div class="header">
+      <div class="number">03</div>
+      <div class="text">MARKET MAKING SERVICE</div>
+    </div>
+    <div class="images">
+      <img src="images/marketing_service.svg" alt="">
+    </div>
+    <div class="title div_one">
+      <div class="text">Price Maker</div>
+      <div class="content">Create and maintain price ranges on demand</div>
+    </div>
+    <div class="title div_two">
+      <div class="text">Price Consultant</div>
+      <div class="content">Chart, Volume consultant. And match with your marketing plan</div>
+    </div>
+    <div class="title div_three">
+      <div class="text">Sale Token</div>
+      <div class="content">Sale token with your price</div>
+    </div>
+    <div class="title div_four">
+      <div class="text">Volume Maker</div>
+      <div class="content">Create Volume on demain</div>
+    </div>
+  </section><br><br><br><br><br>
+
+  <section class="our_customers">
+    <div class="title">Our customers</div><br><br><br><br><br>
+    <div class="logo">
+      <img src="images/bsclaunch.svg" alt="">
+      <img src="images/pnyx.svg" alt="">
+      <img src="images/polka.svg" alt="">
+      <img src="images/bsclaunch.svg" alt="">
+    </div>
+  </section><br><br><br><br><br>
+
+
   <div class="banner_footer">
     <div class="content_footer">
       <div class="title_row_one">Effective Solution</div>
@@ -306,7 +355,9 @@
     <img src="images/final.svg" alt="">
 
   </div>
-  <br><br><br><br>
+  <br><br><br>
+
+
   <footer>
     <div class="footer">
       <div class="footer_left">
@@ -335,8 +386,33 @@
           </div>
         </div>
       </div>
-    </div>
-  </footer><br><br><br>
+    </div><br><br>
+    <div class="text_footer">© 2021 IMM Corp All rights reserved</div>
+  </footer><br>
+  <!-- <section class="slider-container">
+    <section class="slide_container">
+      <div class="child_slide_container">
+        <div class="slide active">
+          <div class="box_slide_one">
+            <div class="images">
+              <img src="images/image_author.svg" alt="">
+            </div>
+            <div class="content">
+              <div class="comment">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                laboris nisi ut aliquip ex ea commodo consequat. Aboris nisi ut aliquip ex ea commodo consequat</div>
+              <div class="author">John & John</div>
+              <div class="position">CEO</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="root_slide">
+        <span id="btn-prev"><img src="images/root_prev.svg" alt=""></span>
+        <span id="btn-next"><img src="images/root_next.svg" alt=""></span>
+      </div>
+    </section>
+  </section> -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
     integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
     crossorigin="anonymous"></script>
