@@ -82,9 +82,10 @@ body{
   color: #FFFFFF;
 }
 .body-service{
-  display: grid;
-  grid-template-columns: 33.33% 33.33% 33.33%;
+  /* display: grid;
+  grid-template-columns: 33.33% 33.33% 33.33%; */
   height: 220px;
+  display: flex;
   z-index: 2;
   top: 556px;
   position: relative;
@@ -98,7 +99,7 @@ body{
   border-right: 1px solid #D9D9D9;
 }
 .body-service .column_three{
-  margin: 0 36px;
+  /* margin: 0 36px; */
 }
 .body-service .body-service_column .service_number{
   font-size: 48px;
@@ -134,7 +135,7 @@ body{
 }
 .body_content{
   padding: 0 130px;
-  max-height: 705px;
+  /* max-height: 705px; */
 }
 .body_content .text_title{
   text-align: center;
@@ -152,17 +153,17 @@ body{
 }
 
 .body_content .body_box{
-  height: 412px;
-  display: grid;
+  height: auto;
+  /* display: grid; */
   padding: 24px;
   grid-column-gap: 20px;
-  grid-template-columns:50%;
+  /* grid-template-columns:50%; */
   border-radius: 20px;
-  /* background-size: cover; */
+  background-size: cover;
   background-position-y: center;
 }
 .box_slide_1{
-  background-image: url("/images/slide_1.svg");
+  background-image: url("/images/banner_2.svg");
 }
 .box_slide_2{
   background-image: url("/images/slide_2.svg");
@@ -229,7 +230,7 @@ body{
 
 .slide_container {
   width:  100%;
-  height:  700px;
+  /* height:  500px; */
   position:  relative;
   /* max-width: 983px;
   margin: 0 auto; */
@@ -280,7 +281,7 @@ span#btn-next{
   position:  absolute;
   z-index:  10;
   width:  100px;
-  bottom:  33%;
+  bottom:  38%;
   left:  50%;
   margin-left: -50px;
   display:  flex;
@@ -347,11 +348,12 @@ span#btn-next{
   background-color: #1A4C9D;
 }
 .content_service{
+  display: flex;
   top: 59%;
   right: 0;
   left: 0;
-  display: grid;
-  grid-template-columns: 33.33% 33.33% 33.33%;
+  /* display: grid;
+  grid-template-columns: 33.33% 33.33% 33.33%; */
   height: 220px;
   z-index: 2;
   position: absolute;
@@ -365,7 +367,7 @@ span#btn-next{
   border-right: 1px solid #D9D9D9;
 }
 .content_service .column_three{
-  margin: 0 36px;
+  /* margin: 0 36px; */
 }
 .content_service .body-service_column .service_number{
   font-size: 48px;
@@ -373,7 +375,7 @@ span#btn-next{
   color: #F86296;
 }
 .content_service .column_three .service_market{
-  margin-top: 35px;
+  /* margin-top: 35px; */
 }
 .content_service .fa{
   border-radius: 50%;
@@ -383,6 +385,7 @@ span#btn-next{
   font-size: 30px;
 }
 .content_service .body-service_column{
+  padding: 0 18px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -402,7 +405,7 @@ span#btn-next{
   position: relative;
   width: 100%;
   margin: auto;
-  height: 300px;
+  height: 335px;
 }
 .timeline-wrapper .middle-line {
   position: absolute;
@@ -470,8 +473,9 @@ span#btn-next{
   bottom: -20px;
 }
 .ido_service{
-  display: grid;
-  grid-template-columns: 60% 40%;
+  display: flex;
+  /* display: grid;
+  grid-template-columns: 60% 40%; */
   position: relative;
   height: 769px;
   width: auto;
@@ -485,9 +489,10 @@ span#btn-next{
 .ido_service .column_two{
 }
 .liquidity_service{
-  display: grid;
-  grid-template-columns: 30% 30% 40%;
-  height: 600px;
+  /* display: grid;
+  grid-template-columns: 30% 30% 40%; */
+  display: flex;
+  /* height: 666px; */
   width: auto;
   position: relative;
   padding: 0 130px;
@@ -498,12 +503,12 @@ span#btn-next{
 .ido_service .column_two .content{
   margin-bottom: 45px;
 }
-.ido_service .column_one .images{
-  width: 500px;
+.point{
+  display: none;
 }
 .ido_service .column_one .title{
   display: flex;
-  margin-bottom: 40px;
+  /* margin-bottom: 40px; */
 }
 .ido_service .column_one .title .number{
   font-size: 79px;
@@ -515,7 +520,7 @@ span#btn-next{
   font-size: 40px;
   font-weight: 900;
   color: #F86296;
-  margin-top: 15px;
+  margin: auto 0;
 }
 .ido_service .title{
   color: #212121;
@@ -526,12 +531,13 @@ span#btn-next{
   color: #757575;
   font-size: 16px;
   font-weight: 400;
+  line-height: 29px;
 }
 .ido_service .column_two{
-  margin-top: 294px;
+  margin-top: 377px;
 }
 .ido_service div{
-  line-height: 40px;
+  /* line-height: 40px; */
 }
 .liquidity_service .column_one{
   /* border: 1px solid black; */
@@ -575,6 +581,7 @@ span#btn-next{
   font-size: 40px;
   font-weight: 900;
   color: #F86296;
+  margin: auto 0;
 }
 .timeline-wrapper .box .box-content .title{
   font-size: 24px;
@@ -633,17 +640,18 @@ span#btn-next{
 }
 .our_customers .logo img{
   width: 250px;
+  height: 100px;
 }
 .market_making{
-  padding: 0 130px;
+  padding: 70px 130px;
   position: relative;
   height: 915px;
   background-color: #F8FAFD;
 }
 .market_making .header{
   display: flex;
-  position: absolute;
-  top: 63px;
+  /* position: absolute;
+  top: 63px; */
 }
 .market_making .images{
   position: absolute;
@@ -806,13 +814,17 @@ span#btn-next{
   animation-name: fade;
   animation-duration: 1.5s;
 }
-
-
-@media only screen and (max-width: 600px) {
-  .our_customers .logo{
-    display: block;
-  }
-  .market_making .div_two{
-    
-  }
+.market_mobile{
+  display: none;
+}
+.images_moblie{
+  display: none;
+}
+.mobile_slide{
+  display: none;
+}
+.img_footer{
+  background-image: url("../images/final.svg");
+  height: 469px;
+  background-size: cover;
 }
